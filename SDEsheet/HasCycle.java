@@ -50,10 +50,10 @@ public class Main {
 		five.next = third;
 
 		if(hasCycle(head)){
-			System.out.println(Found cycle in list);
+			System.out.println("Found cycle in list");
 		}
 		else {
-			System.out.println(Didn't find cycle in list);
+			System.out.println("Didn't find cycle in list");
 		}
 	}
 }
