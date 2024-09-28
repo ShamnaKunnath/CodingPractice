@@ -1,5 +1,21 @@
 class Main {
-	public int jump(int[] nums) {
+	public int jumbOptimal(int[] nums) {
+		int near = 0, far = 0, jumbs = 0;
+
+		while(far < nums.length-1){
+			int farthest = 0;
+			for(int i = near; i <= far; i++){
+				farthest = Math.max(farthest, i + nums[i]);
+			}
+			near = far + 1;
+			far = farthest;
+			jumbs++;
+		}
+
+		return jumbs;
+		
+	}
+	public int jumpRecursion(int[] nums) {
         List<Integer> ans = new ArrayList<>();
         ans.add(nums.length);
 		helper(0, ans, 0,nums);
